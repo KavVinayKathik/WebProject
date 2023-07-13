@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        .box{
+    border: 5px solid mediumseagreen;
+    animation-name: reg;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    left: 35%;
+}
+@keyframes reg {
+    from{
+        opacity:0.3;
+
+    }
+    to{
+        opacity:1.0;
+    }
+}
+input[type=text],input[type=password],input[type=email],input[type=date]{
+    width: 250px;
+    padding: 10px;
+    padding-left: 30px;
+    border: 2px solid turquoise;
+    background-color:tan;
+    color:darkblue;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+}
+#submit{
+    width: 50px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0;
+    border: 3px solid grey;
+    border-radius: 5px;
+}
+#submit:hover{
+    width: 80px;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: springgreen;
+}
+::placeholder{
+    color:darkslategrey ;
+    animation-name: ph;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    padding-left: 40px;
+    animation-delay: 5s;
+}
+@keyframes ph {
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(5px);
+    }
+    100%{
+        animation-direction: reverse;
+    }
+}
+.mis{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+table,td,th{
+    border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+    <form onsubmit="return validation()" action="post">
+        <h1 style="color: mediumslateblue;">Get Registered!</h1>
+        <label for="name">Name</label>
+       <br> <input type="text" id="name" required placeholder="Enter Your Name Here">
+        <label for="mno">Mobile No</label>
+        <br><input type="text" id="mno" required placeholder="Enter Your Mobile No.">
+        <label for="email">E-mail</label>
+        <br><input type="email" required id="email" placeholder="Enter Your e-mail Here">
+        <label for="ps1">Enter New Password</label>
+        <br><input type="password" required id="ps1" placeholder="Enter Your Password">
+        <label for="ps2">Confirm Your Password</label>
+        <br><input type="password" required id="ps2" placeholder="Re-enter Your Password">
+        <label for="dob">Date Of Birth</label>
+        <br><input type="date" id="dob" required placeholder="Choose The Date"><br>
+        <input type="checkbox" id="check">
+        <label for="check">Accept All Terms And Conditions</label><br><br>
+        
+        <button type="submit" id="submit" onclick="validation()">Submit</button>
+</form>
+</div>
+<br><center>
+<h2>Data Entered</h2>
+    <table id="registration-table" ">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>DOB</th>
+          <th>Accepted terms</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table></center>
+<script>
+    function validation(){
+    var username = document.getElementById("name").value;
+    var email= document.getElementById("email").value;
+    var password1 = document.getElementById("ps1").value;
+    var password2 = document.getElementById("ps2").value;
+    const dIn = document.getElementById('dob');
+    
+   
+    const maxD = new Date();
+    maxD.setFullYear(maxD.getFullYear() - 18);
+    const minD = new Date();
+    minD.setFullYear(minD.getFullYear() - 55);
+    dIn.min = minD.toISOString().slice(0, 10);
+    dIn.max = maxD.toISOString().slice(0, 10);
+
+    dIn.addEventListener('change', event => {
+    const dob = new Date(event.target.value);
+    const ageDiff = Date.now() - dob.getTime();
+    const ageDate = new Date(ageDiff);
+    const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    if (age < 18 || age > 55) {
+    alert('Please enter a valid date of birth between 18 and 55 years old.');
+    dobInput.value = '';
+  }
+});
+
+
+    if(username == ""){
+        alert("Please Fill Your Name!");
+        return false;
+    }
+    if(email == ""){
+        alert("Please Fill Your E-mail!");
+        return false;
+    }
+    if(password1 == ""){
+        alert("Please Fill Your Password!");
+        return false;
+    }
+    if(password2 == ""){
+        alert("Please Re-Enter Your Password!");
+        return false;
+    }
+    if(password1 != password2){
+        alert("Passwords Entered Do Not Match!!!")
+        return false;
+    }
+    return true;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webapp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <fieldset class="field" style="padding:20px;background-color: darkcyan;">
+      <div class="navbar">
+                <a class="nav" href="#home">Home</a>
+                <a class="nav" href="#about1">Services</a>
+                <a class="nav" href="#faq">FAQ'S</a>
+                <a class="nav" href="#follow">Follow Us</a>
+        </div>     
+    
+        <img id="tour" src="tour.png" alt=""  style="border: 8px solid blueviolet;border-radius: 10px;">
+        <h1 style="text-align: center;border: 10px solid yellowgreen;border-radius: 10px; font-size: 100px;background-color: darkolivegreen;color:greenyellow">GREEN TOURISM <sup style="font-size: 15px;">PVTLTD</sup></h1>
+        <p style="text-align:center;color:aquamarine;font-size:xx-large;font-style: italic;">Taking U Further For A Peaceful Nature!</p>
+
+    </fieldset>
+    <fieldset style="border: 3px solid yellowgreen;border-radius: 10px;" id="home">
+        <h2 style="color:whitesmoke;font-size: xx-large;text-align: center;">Choose Any Mode Of Transport You Want To Travel <strong>&#128071;</strong> </h2>
+        <div class="transport">
+        <center><a href="flight.html" onclick="portal1()"><img src="3125713.png" alt="Flight" height="150px" width="150px"><figcaption style="color:blanchedalmond;font-size: 30px;">Airline Services</figcaption></a><br>
+        <a href="hotel.html" onclick="portal2()"><img src="download (1).png" alt="Hotel" height="150px" width="150px"><figcaption style="color:blanchedalmond;font-size: 30px;">Hotel Services</figcaption></a><br>
+        <a href="railways.html" onclick="portal3()"><img src="download.png" alt="Train" height="150px" width="150px"><figcaption style="color:blanchedalmond;font-size: 30px;">Railway Services</figcaption></a>
+        </center>    
+    </div> 
+    <div class="about" id="about1">
+        <h2><center>About Our Services</center></p></h2>
+        <p style="background-color: lightblue;color:black;font-size: 25px;"><strong>Green Tourism</strong>,a government undertaking facilitating tourism since 1975 will take you to a guided tour of the entire India through this website. It explores the wonders of India, its heritage, the art and craft, the diverse cuisine and culture. A symbol of the country's rich past and thriving present, India is a country where ancient and modern blend seamlessly together. It is a place that not only touches your pulse but even fastens it to a frenetic speed. Home to millions of dreams, the nation takes on unprecedented responsibilities o realizing dreams bringing people closer and inspiring their throughts.
+
+        </p>
+    <center><h2 id="faq">FAQ'S</h2>
+    <input type="text" id="question" placeholder="  Write Your Doubts Here!">
+    <br>
+    <br>
+    <input type="button" id="submit" value="Submit" onclick="clickAlert();"> </center>
+    <br>
+    <br>
+    <div class="soc" id="follow">
+        <center>
+            <p style="font-size: 30px;"><strong> Visit Us On</strong> </p> <br>  
+        <a href="instagram.com"><img src="ins.png"  height="100" width="100">toury_Green</a><br>
+        <a href="facebook.com"><img src="fb.png"  height="100" width="100">toury_Green.fb</a><br>
+        <a href="twitter.com"><img src="tw.png"  height="100" width="100">toury_Greentalks</a> </center>
+        </div>
+    </div>
+</div>      
+    </fieldset>
+    <script>
+        function clickAlert(){
+           alert("Do You Really Want To Submit Your Doubt!!!");
+        };
+        function portal1(){
+            alert("Do You Want To Go To Flight Services Portal!!!");
+        };
+        function portal2(){
+            alert("Do You Want To Go To Hotel Services Portal!!!");
+        };
+        function portal3(){
+            alert("Do You Want To Go To Railway Services Portal!!!");
+        };
+     </script>
+
+</body>
+</html>

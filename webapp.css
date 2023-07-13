@@ -1,0 +1,136 @@
+.transport{
+    border:10px solid skyblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    background-image: url("gree.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+fieldset .transport a img:hover{
+    height: 200px;
+    width: 200px;
+}
+a:active{
+    justify-content:baseline;
+    display: flex;
+}
+input[type=button]{
+    color: black;
+    background-color: aquamarine;
+    font-size: 20px;
+    
+    border: 3px solid green;
+    border-radius: 10px;
+
+}
+
+input[type=text]{
+    color: black;
+    background-color:lavender;
+    font-size: 20px;
+    border: 3px solid green;
+    border-radius: 10px;
+    height: 50px;
+
+}
+
+.soc{
+    padding: 10px;
+    background-color: lavender;
+    border: 3px solid rebeccapurple;
+    border-radius: 10px;
+}
+.about{
+    margin: 5px;
+    padding: 10px;
+    border:10px solid orangered;
+    border-radius: 10px;
+    background-color: bisque;
+}
+.field{
+    background-image: url("back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    
+}
+.navbar{
+    justify-content: right;
+    display: flex;
+    position:fixed;
+    right: 10px;
+}
+.nav{
+    background-color: burlywood;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 5px solid salmon;
+    padding: 5px;
+    margin: 5px;
+    color: darkcyan;
+    
+    
+}
+#submit:hover{
+    font-size: 50px;
+    background-color: cyan;
+}
+img{
+    border: 5px solid grey;
+    border-radius: 10px;
+}
+fieldset #tour{
+    height:50px;
+    width:50px;
+    animation-name: tour;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes tour {
+    from{
+        height:50px;
+        width:50px;
+    }
+    to{
+        height: 200px; ;
+        width: 200px;;
+    }
+    
+}
+fieldset h1{
+    animation-name: head;
+    animation-duration:15s;
+    animation-iteration-count:infinite;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes head {
+    from{
+        background-image:linear-gradient(to right,#12c2e9,#e638ba);
+        color: blueviolet;
+    }
+    to{
+        background-image: linear-gradient(to right,#114357,#f29492);
+    }
+}
+body{
+    animation-name: back;
+    animation-duration:15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes back {
+    from{
+        background-image: linear-gradient(to right,#114357,#f29492);
+    }
+    to{
+        background-image:linear-gradient(to right,#12c2e9,#e638ba); 
+    }
+}
+a:hover{
+    font-size: 50px ;
+    color: hotpink;
+}
